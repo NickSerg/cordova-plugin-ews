@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-ews" version="0.1.0">
+    <name>cordova-plugin-ews</name>
+    <description>Plugin for Cordova (or PhoneGap) 3.0+ to access Exchange web services</description>
+    <keywords>cordova,android,ews</keywords><license>Apache 2.0 License</license>
+    <repo>https://github.com/NickSerg/cordova-plugin-ews.git</repo>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/AndroidEws.js" name="AndroidEws">
+        <clobbers target="AndroidEws" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AndroidEws">
+                <param name="android-package" value="com.nickserg.plugins.EwsPlugin"/>
+            </feature>
+        </config-file>
+        <source-file
+                src="src/android/com/nickserg/plugins/EwsPlugin.java"
+                target-dir="src/com/nickserg/plugins"/>
+        <source-file
+                src="src/android/com/nickserg/plugins/libs/commons-codec-1.4.jar"
+                target-dir="libs" />
+        <source-file
+                src="src/android/com/nickserg/plugins/libs/commons-httpclient-3.1.jar"
+                target-dir="libs" />
+        <source-file
+                src="src/android/com/nickserg/plugins/libs/commons-logging-1.1.1.jar"
+                target-dir="libs" />
+        <source-file
+                src="src/android/com/nickserg/plugins/libs/ews.jar"
+                target-dir="libs" />
+        <source-file
+                src="src/android/com/nickserg/plugins/libs/jcifs-1.3.15.jar"
+                target-dir="libs" />
+    </platform>
+</plugin>
