@@ -1,0 +1,34 @@
+{
+  "name": "cordova-plugin-ews",
+  "version": "0.1.0",
+  "description": "Plugin for Cordova (or PhoneGap) 3.0+ to access Exchange web services",
+  "cordova": {
+    "id": "cordova-plugin-ews",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickSerg/cordova-plugin-ews.git"
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "ews",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Tur Nikolay",
+  "license": "Apache 2.0 License",
+  "bugs": {
+    "url": "https://github.com/NickSerg/cordova-plugin-ews/issues"
+  },
+  "homepage": "https://github.com/NickSerg/cordova-plugin-ews#readme"
+}
